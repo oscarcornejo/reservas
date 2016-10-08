@@ -1,0 +1,48 @@
+<div class="color-line"></div>
+
+<div class="back-link">
+    <a ui-sref="dashboard" class="btn btn-primary">Back to Dashboard</a>
+</div>
+<div ng-include="login.menuTemplate.url"></div>
+    <div class="login-container" ng-controller = "loginCtrl as login">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center m-b-md">
+                    <h3>PLEASE LOGIN TO APP</h3>
+                    <small>This is the best app ever!</small>
+                </div>
+                <div class="hpanel">
+                    <div class="panel-body">
+                            <form>
+                                <div class="form-group">
+                                    <label class="control-label" for="username">Email</label>
+                                    <input type="email" class="form-control" placeholder="Email" ng-model="login.loginForm.email">
+                                    <span class="help-block small">Your unique username to app</span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="password">Password</label>
+                                    <input type="password" class="form-control" placeholder="********" ng-model="login.loginForm.password">
+                                    <span class="help-block small">Yur strong password</span>
+                                </div>
+                                <div class="checkbox">
+                                        <input icheck type="checkbox" ng-model="remember" ng-init="remember = true">
+                                         Remember login
+                                    <p class="help-block small">(if this is a private computer)</p>
+                                </div>
+                                <button class="btn btn-success btn-block" ng-click="login.login()">Login</button>
+                                <hr>
+                                <button class="btn btn-block btn-social btn-google-plus" ng-click="login.loginGooglePlus() ">Iniciar Sesión con Google <i class="fa fa-google-plus"></i></button>
+
+                                <a class="btn btn-info btn-block" ui-sref="common.register">Registrarme</a>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <strong>HOMER</strong> - AngularJS Responsive WebApp <br/> 2015 Copyright Company Name
+            </div>
+        </div>
+    </div>
+</div>
